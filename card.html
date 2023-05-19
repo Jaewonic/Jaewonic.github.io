@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaewonic-Card-Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#6ecbf7, #0a1937 );
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px 90px;
+    flex-wrap: wrap;
+    padding: 100px 50px;
+}
+.container .card{
+    position: relative;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,.68);
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.container .card:hover{
+    height: 450px;
+}
+
+.card .img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 20px;
+    background-color: gray;
+    transition: 0.4s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card:hover .img{
+    position: absolute;
+    top: -50px;
+    scale: 0.88;
+}
+.card .img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.card .content{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.card:hover .content{
+    top: 200px;
+    height: 200px;
+}
+.card .content h2{
+    font-size: 1.8rem;
+    text-shadow:  1.5px 2px black;
+    color: var(--color);
+}
+.card .content p{
+    font-size: 1.2rem;
+    margin: 50px 0 10px 0;
+    color: var(--color);
+    font-weight: bold;
+}
+.card .content a{
+    color: white;
+    font-size: 40px;
+    background-color: var(--color);
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 30px;
+    transition: 0.4s ease-in-out;
+}
+.card .content a:hover{
+    background-color: #031f58;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="--color:rgb(70, 130, 180);">
+            <div class="img">
+                <img src="/img/bg-1.png">
+            </div>
+            <div class="content">
+                <h2>TISTORY BLOG</h2>
+                <p>My first<br>develope's blog</p>
+                <a href="http://jwns.tistory.com"><i class='bx bxl-blogger'></i></a>
+            </div>
+        </div>
+        <div class="card" style="--color:rgb(76, 150, 180);">
+            <div class="img">
+                <img src="/img/bg-2.jpeg">
+            </div>
+            <div class="content">
+                <h2>INSTAGRAM</h2>
+                <p>Jaewonic's instagram</p>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <div class="card" style="--color:rgb(106, 90, 205);">
+            <div class="img">
+                <img src="/img/bg-3.jpeg">
+            </div>
+            <div class="content">
+                <h2>GITHUB BLOG</h2>
+                <p>My github blog</p>
+                <a href="http://jaewonic.github.io"><i class='bx bxl-github' ></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
